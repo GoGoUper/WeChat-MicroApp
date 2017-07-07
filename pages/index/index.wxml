@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <scroll-view class="trip-list" scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+    <view class="itemView" wx:for="{{trips}}">
+      <text>{{item.name}}</text>
+    </view>
+  </scroll-view>
+</view>
